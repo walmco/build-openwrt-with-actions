@@ -136,7 +136,7 @@ jobs:
       - name: 多线程编译 openWRT (Build openWRT multithreading)
         if: ${{inputs.multithreading == true}}
         working-directory: openWRT
-        run: make -j$(nproc) V=s
+        run: make -j$(nproc)
 
       - name: 单线程编译 openWRT (Build openWRT single thread)
         if: ${{inputs.multithreading == false}}
